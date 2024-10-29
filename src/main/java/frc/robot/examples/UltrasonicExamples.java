@@ -9,7 +9,7 @@ import edu.wpi.first.wpilibj.Ultrasonic;
 /**
  * Ultrasonic sensor examples.
  */
-public final class UltrasonicExamples {
+public abstract class UltrasonicExamples {
   
   /*
    * Example Ultrasonic Sensor: https://kb.vex.com/hc/en-us/articles/360038608771-Using-the-V5-3-Wire-UltraSonic-Range-Finder

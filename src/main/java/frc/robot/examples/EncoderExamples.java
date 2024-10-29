@@ -15,7 +15,7 @@ import com.revrobotics.RelativeEncoder;
 /**
  * Examples of using encoders
  */
-public final class EncoderExamples {
+public abstract class EncoderExamples {
 
   /**
    * Examples for a Relative Encoder. Relative here means that the value gets erased whenever we turn off the

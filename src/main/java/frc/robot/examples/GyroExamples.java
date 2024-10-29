@@ -9,16 +9,17 @@ import com.kauailabs.navx.frc.AHRS;
 import edu.wpi.first.wpilibj.SerialPort.Port;
 
 /**
- * Examples of using the NavX gyro
+ * Used to get the robot orientation in 3-dimensional space. Examples are using the NavX gyro.
  * https://pdocs.kauailabs.com/navx-mxp/
  */
-public final class GyroExamples {
+public abstract class GyroExamples {
 
   /**
    * https://simple.wikipedia.org/wiki/Pitch,_yaw,_and_roll
    */
   private void NavX_GetRobotAngles_Example() {
     // Robot has One NavX usually either connected via MXP or USB on the RoboRIO
+    // AHRS = Attitude and Heading Reference System
     // final Port navxPort = Port.kUSB;
     final Port navxPort = Port.kMXP;
     final AHRS navx = new AHRS(navxPort);

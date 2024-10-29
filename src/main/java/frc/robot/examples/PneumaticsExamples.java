@@ -10,9 +10,9 @@ import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
 
 /**
- * Pneumatics examples.
+ * Pneumatics examples. Pneumatics uses air with a compressor and air tank(s) on the robot to perform actions.
  */
-public final class PneumaticsExamples {
+public abstract class PneumaticsExamples {
   
   /*
    * Solenoids can be used to controller pneumatic cylinders are set to true or false

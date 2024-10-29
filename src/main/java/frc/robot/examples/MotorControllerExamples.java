@@ -14,7 +14,7 @@ import edu.wpi.first.wpilibj.motorcontrol.Spark;
 /**
  * Examples of using motor controllers
  */
-public final class MotorControllerExamples {
+public abstract class MotorControllerExamples {
   
   /**
    * Example for a PWM Motor Controller. This example uses a Spark from RevRobotics.

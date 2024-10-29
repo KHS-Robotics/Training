@@ -9,7 +9,7 @@ import edu.wpi.first.wpilibj.DigitalInput;
 /**
  * Examples of using digital inputs.
  */
-public final class DigitalInputExamples {
+public abstract class DigitalInputExamples {
   
   /**
    * Digital Inputs detect a true or false value.
