@@ -22,7 +22,7 @@ public final class MotorControllerExamples {
    * https://www.andymark.com/products/spark-bushed-dc-motor-controller
    */
   private void PWM_Controller_Example() {
-    // Create the PWM Motor Controller
+    // Create the PWM Motor Controller using connected channel on RoboRIO
     // in this case we are using a Spark from RevRobotics
     // The Spark motor object normally consturcted inside the Subsystem the motor belongs to
     final int pwmChannel = 1;
@@ -83,7 +83,14 @@ public final class MotorControllerExamples {
 
     // PIDF Controller for Velocity and Postion control modes
     SparkPIDController pidControllerForVelocityOrPositonControl = canMotorController.getPIDController();
+
     // These modes requires PIDF values
+
+    // https://docs.wpilib.org/en/stable/docs/software/advanced-controls/introduction/introduction-to-pid.html
+    // https://docs.wpilib.org/en/stable/docs/software/advanced-controls/introduction/pid-video.html#pid-introduction-video-by-wpi
+    // The math looks harder than it really is - understanding at a conceptual level will help you understand the rigor more
+
+    // set PIDF values - these values are somewhat empirical and change with every unique system/robot
     pidControllerForVelocityOrPositonControl.setP(1);
     pidControllerForVelocityOrPositonControl.setI(0.01);
     pidControllerForVelocityOrPositonControl.setD(0.5);
