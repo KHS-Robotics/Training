@@ -18,13 +18,14 @@ public final class PneumaticsExamples {
    * Solenoids can be used to controller pneumatic cylinders are set to true or false
    */
   private void Solenoid_Example() {
+    // Pneumatics can be used to extend and retract, or to grab and release for example
     final int digialChannelOnRoboRio = 2;
     final Solenoid piston = new Solenoid(PneumaticsModuleType.REVPH, digialChannelOnRoboRio);
 
-    // Extend
+    // Extend or Grip
     piston.set(true);
 
-    // Retract
+    // Retract or Open
     piston.set(false);
   }
 
