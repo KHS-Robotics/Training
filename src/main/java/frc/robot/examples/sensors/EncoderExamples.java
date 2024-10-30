@@ -41,13 +41,15 @@ public abstract class EncoderExamples {
     // and we want the position to return in meters
     final double input = 1;
     final double output = 6.75;
-    final double positionConversionFactor = (2 * Math.PI * Units.inchesToMeters(2) * input) / output;
+    // (2 * PI * R) * (input / output)
+    final double positionConversionFactor = (2 * Math.PI * Units.inchesToMeters(2)) * (input / output);
     encoder.setPositionConversionFactor(positionConversionFactor);
 
     double positionInMeters = encoder.getPosition();
 
     // Velocity Conversion Factor is the same as position but divided by 60 seconds to get meters/second
-    encoder.setVelocityConversionFactor(positionConversionFactor / 60.0);
+    final double velocityConversionFactor = positionConversionFactor / 60.0;
+    encoder.setVelocityConversionFactor(velocityConversionFactor);
 
     double speedInMetersPerSecond = encoder.getVelocity();
   }
@@ -63,9 +65,13 @@ public abstract class EncoderExamples {
     final int canID = 20;
     CANcoder absoluteEncoder = new CANcoder(canID);
 
-    // Conversion Factor is set in Phoenix Tuner X (same concept as a relative encoder)
+    // Returns current rotation either from [-0.5, 0.5] or [0, 1]
+    // depending on the selected setting
     // https://v6.docs.ctr-electronics.com/en/stable/docs/tuner/index.html
-    double position = absoluteEncoder.getPosition().getValueAsDouble();
+    double rotations = absoluteEncoder.getPosition().getValueAsDouble();
+
+    // Get the position as an angle in degreees
+    double angle = 360 * rotations;
   }
 
 }
