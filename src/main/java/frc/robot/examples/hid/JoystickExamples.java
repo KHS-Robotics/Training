@@ -2,7 +2,7 @@
 // Open Source Software; you can modify and/or share it under the terms of
 // the WPILib BSD license file in the root directory of this project.
 
-package frc.robot.examples;
+package frc.robot.examples.hid;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.XboxController;
@@ -11,6 +11,7 @@ import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 
 /**
  * Joystick examples.
+ * HID = Human Interface Device (like a joystick)
  */
 public abstract class JoystickExamples {
   // Get joystick using Port Number on Driver Station
