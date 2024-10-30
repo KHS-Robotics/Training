@@ -17,7 +17,7 @@ public abstract class SmartDashboardExamples {
    * a unique key to go with it. The unique key is a string. This key is the name of the variable
    * so you can find it on the dashbord on the Driver Station laptop. This also works in the simulator.
    */
-  private void SmartDashobard_PutData_Example() {
+  private void SmartDashboard_PutData_Example() {
     // You can put numbers, booleans, and strings
 
     // numbers (int, double, float, etc)
